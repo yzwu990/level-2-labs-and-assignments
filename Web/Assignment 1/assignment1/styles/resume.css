@@ -1,0 +1,559 @@
+/*--------------------------------------------------------------
+# Resume page
+--------------------------------------------------------------*/
+/* Resume is one column on small screens.
+   It will be two columns on medium and large screens
+*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  #main-resume {
+    height: 100%;
+  }
+
+  .resume-main-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .education-container,
+  .experience-container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 26px;
+    padding: 10px;
+  }
+
+  .resume-main-row {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 2px solid #026ec0;
+    border-bottom: 2px solid #026ec0;
+  }
+
+  .resume-main-row h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .resume-item {
+    padding: 0 0 20px 20px;
+    border-left: 4px solid #026ec0;
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+
+  .resume-item ul li {
+    list-style: inside;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .institute {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  .resume-item-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+    align-items: flex-start;
+  }
+
+  .resume-item h4 {
+    line-height: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 60%;
+  }
+
+  .resume-item h5 {
+    font-size: 12px;
+    background: #cee9fd;
+    padding: 5px 5px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+
+  /* Bullet points for titles */
+  .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: #026ec0;
+    border: 2px solid #026ec0;
+    box-sizing: border-box;
+  }
+
+  .skill-container,
+  .soft-skills {
+    margin-top: 20px;
+  }
+
+  .hard-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill-container ul li {
+    margin-left: 20px;
+  }
+
+  .soft-skills {
+    margin-top: 30px;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  #main-resume {
+    height: 100%;
+  }
+
+  .resume-main-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .education-container,
+  .experience-container {
+    width: 100%;
+  }
+
+  h2 {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .resume-main-row {
+    display: flex;
+    padding: 10px;
+    border-top: 2px solid #026ec0;
+    border-bottom: 2px solid #026ec0;
+  }
+
+  .resume-main-row h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .resume-item {
+    padding: 0 0 20px 20px;
+    border-left: 4px solid #026ec0;
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+
+  .resume-item ul li {
+    list-style: inside;
+    margin-top: 10px;
+  }
+
+  .institute {
+    margin-bottom: 1.5em;
+    font-style: italic;
+  }
+
+  .resume-item-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+    align-items: flex-start;
+  }
+
+  .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 60%;
+  }
+
+  .resume-item h5 {
+    font-size: 16px;
+    background: #cee9fd;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+
+  .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: #026ec0;
+    border: 2px solid #026ec0;
+    box-sizing: border-box;
+  }
+
+  .skill-container {
+    margin-top: 50px;
+  }
+
+  .hard-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill-container ul li {
+    margin-left: 20px;
+  }
+
+  .soft-skills {
+    margin-top: 50px;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  #main-resume {
+    height: 100%;
+  }
+
+  .resume-main-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .education-container,
+  .experience-container {
+    width: 100%;
+  }
+
+  h2 {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .resume-main-row {
+    display: flex;
+    padding: 10px;
+    border-top: 2px solid #026ec0;
+    border-bottom: 2px solid #026ec0;
+  }
+
+  .resume-main-row h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .resume-item {
+    padding: 0 0 20px 20px;
+    border-left: 4px solid #026ec0;
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+
+  .resume-item ul li {
+    list-style: inside;
+    margin-top: 10px;
+  }
+
+  .institute {
+    margin-bottom: 1.5em;
+    font-style: italic;
+  }
+
+  .resume-item-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+    align-items: flex-start;
+  }
+
+  .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 60%;
+  }
+
+  .resume-item h5 {
+    font-size: 16px;
+    background: #cee9fd;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+
+  .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: #026ec0;
+    border: 2px solid #026ec0;
+    box-sizing: border-box;
+  }
+
+  .skill-container {
+    margin-top: 50px;
+  }
+
+  .hard-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill-container ul li {
+    margin-left: 20px;
+  }
+
+  .soft-skills {
+    margin-top: 50px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  .projects-main-container {
+    /* container-fluid */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .projects-main-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-item {
+    flex: 0 0 auto;
+    width: 25%;
+    min-width: 280px;
+  }
+
+  .project-item-inner {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    height: 281px;
+  }
+
+  .project-text-container {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 50%;
+    margin-top: 140px;
+  }
+
+  .project-image {
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    left: -20px;
+  }
+
+  .project-text-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .project-item:hover .project-image {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .projects-main-container {
+    /* container-fluid */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .projects-main-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .project-item {
+    flex: 0 0 auto;
+    width: 25%;
+    min-width: 280px;
+  }
+
+  .project-item-inner {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    height: 281px;
+  }
+
+  .project-text-container {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 50%;
+    margin-top: 140px;
+  }
+
+  .project-image {
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    left: -20px;
+  }
+
+  .project-text-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .project-item:hover .project-image {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  .projects-main-container {
+    /* container-fluid */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 100%;
+    max-width: 1320px;
+  }
+
+  .projects-main-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .project-item {
+    flex: 0 0 auto;
+    width: 25%;
+    min-width: 280px;
+  }
+
+  .project-item-inner {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    height: 281px;
+  }
+
+  .project-text-container {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .project-item:hover .project-text-container {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+  }
+
+  .project-image {
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    left: -20px;
+  }
+
+  .project-text-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .project-item:hover .project-image {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+  }
+}

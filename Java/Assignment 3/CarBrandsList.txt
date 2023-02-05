@@ -1,0 +1,76 @@
+package assignment3;
+
+//22F Assignment 3: CarBrandsList.java 
+
+// Insert your solution code into this file as instructed in the information document (please read before you start). Hints have been provided on your tasks.
+// Insert your javadoc style comments to clearly and thoroughly explain your work.
+// Ensure that you retain the names of all methods specifically mentioned in the instructions.
+// Note that there are codes inbetween the print statements (see assignment information).
+
+
+//TO DO: YOUR TASK 1: Add the necessary import statements here.
+
+
+public class CarBrandsList {
+	
+public static void main(String[] args) {
+   // add rides to list1
+   String[] rides = {"cardillac", "toyota", "suzuki", "chevrolet", "hyundai",  "mercedies", "keke"};
+   
+   // TO DO: YOUR TASK 2
+
+   // add rides2 to list2
+   String[] rides2 = {"volvo", "subaru", "volkswagen", "nissan", "cardillac", "toyota", "honda"};
+   
+   // TO DO: YOUR TASK 3
+
+   // HINT: In the section below you should insert code for method calls in main for each of the sections below.
+
+   // TO DO: YOUR TASK 4
+   
+   // TO DO: YOUR TASK 5
+
+   // TO DO: YOUR TASK 6
+ 
+   // TO DO: YOUR TASK 7
+
+  System.out.printf("%nDisplaying names of car brands in uppercase letters...");
+   
+   // TO DO: YOUR TASK 8
+
+   System.out.printf("%nDeleting car brands 5 to 7...");
+   
+   System.out.printf("%nHere is the current list of car brands...");
+   
+   // TO DO: YOUR TASK 9
+
+   // TO DO: YOUR TASK 10  
+
+   System.out.printf("%nSorted car brands in alphabetical order...");
+
+
+   // TO DO: YOUR TASK 11
+
+   System.out.printf("%nRemoving duplicate car brands...");
+   
+} 
+
+  // HINT: MORE TO DO: Insert all your methods in this section which includes: 
+
+ // output List contents
+
+
+ // locate String objects and convert to uppercase
+
+
+ //locate String objects and eliminate duplicates
+ 
+
+ // obtain sublist and use clear method to delete sublist items
+
+
+ // print the list in reverse order
+   
+
+}
+

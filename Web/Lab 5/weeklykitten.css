@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+#email,
+#login,
+#pass,
+#pass2 {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+button {
+  margin-top: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#submit {
+  background-color: dodgerblue;
+}
+
+#reset {
+  background-color: red;
+}
+
+hr,
+h1,
+form {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+form {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form div {
+  margin-top: 30px;
+}

@@ -1,0 +1,109 @@
+#!/bin/bash
+# FileName: mycalc.sh
+# Date: Nov 30 2022
+# Author: Yanzhang Wu
+# Student ID: 41056465
+# Semester: Fall 2022
+# Course Code: CST 8102
+# Lab Section: 314
+# Lab Professor: Matthew O'Meara
+#
+# Purpose: This is a calculator script. It will add and
+# substract two numbers.
+
+
+# addition function calculates the sum
+add() {
+   (( sum = $1 + $2 ))  
+   echo "$1 plus $2 is " $sum
+}
+
+# substraction function calculates the difference
+sub() {
+   (( difference = $1 - $2 ))  
+   echo "$1 minus $2 is " $difference
+}
+
+
+displayMenu() {
+
+echo "This is a calculator."
+echo "Press A to add."
+echo "Press S to substract."
+echo "Press Q or q to Quit"
+}
+
+choice=n
+
+cal(){
+    while [ $choice != "Q" ] && [ $choice != "q" ]
+    do
+        displayMenu
+        read choice
+        
+        if [ $choice == "a" ] || [ $choice == "A" ]
+        then
+           read -p "please input 2 numbers, seperate by space: " num1 num2
+            (( sum = $num1 + $num2 ))  
+            echo "$num1 add $num2 is " $sum
+	    echo "--------------------------"
+
+        elif [ $choice == "s" ] || [ $choice == "S" ]
+        then
+           echo "please input 2 numbers, seperate by space."
+           read -p "Subtraction is first number minus second number: " num1 num2
+            (( dif = $num1 - $num2 ))  
+            echo "$num1 minus $num2 is " $dif
+            echo "--------------------------"
+
+        elif [ $choice != 'Q' ] && [ $choice != 'q' ]
+            then
+            echo "Valid options are A,S or [Q]uit"
+	    echo "--------------------------"
+
+        fi
+    done
+}
+
+
+
+
+
+
+
+
+
+# check number of arguments at command line
+if [ $# -ne 3 ]
+  then
+  echo "Incorrect Number of Parameters"
+  echo "Usage: 4 plus 6 is: 4 + 6. There is a space between each variables!"
+  echo "Usage: 10 minus 5 is: 10 - 5. There is a space between each variables!"  
+  cal
+fi
+
+# check the operator
+if [ $# -eq 3 ]  
+   then
+   if [ $2 = '+' ]
+   then 
+      add $1 $3
+   elif [ $2 = '-' ]
+   then
+      sub $1 $3
+   else 
+      echo "Incorrect Operator" $2
+      echo "+ to add"
+      echo "- to substract"
+      cal
+   fi
+fi
+
+
+
+
+
+
+
+
+# eof: mycalc.sh

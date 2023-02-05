@@ -1,0 +1,86 @@
+#!/bin/bash
+# FileName: mygrade.sh
+# Date: Nov 3 2022
+# Author: Yanzhang Wu
+# Student ID: 41056465
+# Semester: Fall 2022
+# Course Code: CST 8102
+# Lab Section: 314
+# Lab Professor: Matthew O'Meara
+#
+# Purpose: This script converts total numerical grade 
+# 	   into letter grade. The total grade is calculated 
+# 	   by adding 4 marks from user input.
+# Grade Schema: 90-100, A+. 85-89, A. 80-84, A-.
+#		77-79, B+. 73-76, B. 70-72, B-.
+#		67-69, C+. 63-66 C. 60-62, C-.
+#		57-59, D+. 53-56, D. 50-52, D-. 0-49, F.
+#
+
+
+# Clear the screen
+clear
+
+
+# get assignment mark
+echo "Enter Assignment mark (0 - 40):"
+	read assignmentMark
+
+# get test 1 mark
+echo "Enter Test 1 mark (0 - 15):"
+	read test1Mark
+
+# get test 2 mark
+echo "Enter Test 2 mark (0 - 15):"
+        read test2Mark
+
+# get final exam mark
+echo "Enter final exam mark (0 - 30):"
+        read finaExamMark
+
+# calculation the total of marks
+(( totalMark = assignmentMark + test1Mark + test2Mark + finaExamMark ))
+
+
+if [ $totalMark -ge 90 ] 
+	then
+	echo "Your final numeric grade is" $totalMark", and your final letter grade is A+"
+elif [ $totalMark -ge 85 ]
+	then
+	echo "Your final numeric grade is" $totalMark", and your final letter grade is A"
+elif [ $totalMark -ge 80 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is A-"
+elif [ $totalMark -ge 77 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is B+"
+elif [ $totalMark -ge 73 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is B"
+elif [ $totalMark -ge 70 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is B-"
+elif [ $totalMark -ge 67 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is C+"
+elif [ $totalMark -ge 63 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is C"
+elif [ $totalMark -ge 60 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is C-"
+elif [ $totalMark -ge 57 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is D+"
+elif [ $totalMark -ge 53 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is D"
+elif [ $totalMark -ge 50 ]
+        then
+        echo "Your final numeric grade is" $totalMark", and your final letter grade is D-"
+else
+	echo "Your final numeric grade is" $totalMark", and your final letter grade is F"
+
+fi
+
+

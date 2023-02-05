@@ -1,0 +1,776 @@
+/* Global Styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    /* opacity: 0; */
+    transform: scale(0);
+  }
+  100% {
+    /* opacity: 1; */
+    transform: scale(1);
+  }
+}
+
+/*--------------------------------------------------------------
+# hamburger_menu
+--------------------------------------------------------------*/
+
+/* Hamburger menu will be shown on small and medium screens.
+   It is hidden on large screens.
+*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  .hamburger_menu #toggle {
+    display: none;
+  }
+
+  .hamburger_menu {
+    width: 100%;
+    height: 40px;
+    background-color: #cee9fd;
+  }
+
+  .hamburger_menu label {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+  .hamburger_menu label .hamburger_container {
+    display: block;
+    position: relative;
+    top: 13px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+  }
+  .hamburger_menu label .hamburger_container span {
+    position: relative;
+    top: 0;
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    /* Add animation */
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+  }
+
+  .hamburger_menu label .hamburger_container span:nth-child(2) {
+    top: 10px;
+  }
+
+  /* First line */
+  /* Use + to find adjacent sibling label */
+  .hamburger_menu
+    #toggle:checked
+    + label
+    .hamburger_container
+    span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+    /* Add animation */
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  }
+
+  /* Second line */
+  .hamburger_menu
+    #toggle:checked
+    + label
+    .hamburger_container
+    span:nth-child(2) {
+    top: 5px;
+    transform: rotate(-45deg);
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .hamburger_menu #toggle {
+    display: none;
+  }
+
+  .hamburger_menu {
+    width: 100%;
+    height: 40px;
+    background-color: #cee9fd;
+  }
+
+  .hamburger_menu label {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+
+  .hamburger_menu label .hamburger_container {
+    display: block;
+    position: relative;
+    top: 13px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .hamburger_menu label .hamburger_container span {
+    position: relative;
+    top: 0;
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+  }
+
+  .hamburger_menu label .hamburger_container span:nth-child(2) {
+    top: 10px;
+  }
+
+  .hamburger_menu
+    #toggle:checked
+    + label
+    .hamburger_container
+    span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  }
+
+  .hamburger_menu
+    #toggle:checked
+    + label
+    .hamburger_container
+    span:nth-child(2) {
+    top: 5px;
+    transform: rotate(-45deg);
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  .hamburger_menu #toggle {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/* Header is hidden by default on small and medium screens.
+   It can be pulled out from hamburger menu.
+   Header is fixed at the left on large screens.
+*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  /* Fade in from top when click hamburger menu */
+  #toggle:checked ~ .header {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .header {
+    /* Static styles */
+    width: 200px;
+    top: -8px;
+    position: relative;
+    background-color: #cee9fd;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    box-shadow: 20px 20px 24px 0 rgb(0 0 0 / 12%);
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+
+    /* Dynamic styles */
+    transform: scaleY(0);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0;
+    background-color: #cee9fd;
+    opacity: 1;
+  }
+
+  .prev-introduction {
+    margin-top: 20px;
+  }
+
+  .head-photo {
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  .contact p {
+    margin: 10px 5px;
+    font-size: 13px;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+
+  .nav-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav-container ul li {
+    width: 15px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .navbar {
+    font-size: 15px;
+  }
+
+  .navbar ul {
+    text-align: left;
+  }
+
+  .navbar ul li {
+    margin: 10px 20px;
+    padding-left: 40px;
+  }
+
+  /* Icons for links */
+  .navbar ul li:nth-child(1) {
+    background-image: url(../Images/icons/house-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 3%;
+  }
+
+  .navbar ul li:nth-child(2) {
+    background-image: url(../Images/icons/clipboard-regular.svg);
+    background-repeat: no-repeat;
+    background-position: 6%;
+  }
+
+  .navbar ul li:nth-child(3) {
+    background-image: url(../Images/icons/school-solid.svg);
+    background-repeat: no-repeat;
+  }
+
+  .navbar ul li:nth-child(4) {
+    background-image: url(../Images/icons/envelope-solid.svg);
+    background-repeat: no-repeat;
+    /* background-size: 23px 23px; */
+    background-position: 3%;
+  }
+
+  .nav-link {
+    text-decoration: none;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  #toggle:checked ~ .header {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .header {
+    /* Static styles */
+    width: 200px;
+    top: -9px;
+    position: relative;
+    background-color: #cee9fd;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 20px 20px 24px 0 rgb(0 0 0 / 12%);
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+
+    /* Dynamic styles */
+    transform: scaleY(0);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0;
+    background-color: #cee9fd;
+    opacity: 1;
+  }
+
+  .head-photo {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .contact p {
+    margin: 10px 5px;
+    font-size: 13px;
+  }
+
+  .social-media {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .nav-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav-container ul li {
+    width: 15px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .navbar {
+    font-size: 15px;
+  }
+
+  .navbar ul {
+    text-align: left;
+  }
+
+  .navbar ul li {
+    margin: 10px 20px;
+    padding-left: 40px;
+  }
+
+  /* Icons for links */
+  .navbar ul li:nth-child(1) {
+    background-image: url(../Images/icons/house-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 3%;
+  }
+
+  .navbar ul li:nth-child(2) {
+    background-image: url(../Images/icons/clipboard-regular.svg);
+    background-repeat: no-repeat;
+    background-position: 6%;
+  }
+
+  .navbar ul li:nth-child(3) {
+    background-image: url(../Images/icons/school-solid.svg);
+    background-repeat: no-repeat;
+  }
+
+  .navbar ul li:nth-child(4) {
+    background-image: url(../Images/icons/envelope-solid.svg);
+    background-repeat: no-repeat;
+    /* background-size: 23px 23px; */
+    background-position: 3%;
+  }
+
+  .nav-link {
+    text-decoration: none;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  .header {
+    width: 250px;
+    left: 0;
+    position: fixed;
+    background-color: #cee9fd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+  }
+
+  .prev-introduction {
+    margin-top: 50px;
+  }
+
+  .head-photo {
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 20px 10px 20px;
+  }
+
+  .contact p {
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  .social-media {
+    margin-top: 20px;
+  }
+
+  .nav-container ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav-container ul li {
+    width: 20px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .navbar {
+    font-size: 22px;
+  }
+
+  .navbar ul {
+    text-align: left;
+  }
+
+  .navbar ul li {
+    margin: 10px 20px;
+    padding-left: 40px;
+  }
+
+  /* Icons for links */
+  .navbar ul li:nth-child(1) {
+    background-image: url(../Images/icons/house-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+  }
+
+  .navbar ul li:nth-child(2) {
+    background-image: url(../Images/icons/clipboard-regular.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+  }
+
+  .navbar ul li:nth-child(3) {
+    background-image: url(../Images/icons/school-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+  }
+
+  .navbar ul li:nth-child(4) {
+    background-image: url(../Images/icons/envelope-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+/* .uottawa and .algonquin have hover on large screens.
+   They are directly visible on small and midium screens.
+*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  .main {
+    position: relative;
+    height: 100vh;
+
+    /** fadeIn main **/
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #main-index {
+    position: relative;
+    background-image: url("../Images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .intro1,
+  .intro2,
+  .uottawa,
+  .algonquin {
+    background-color: rgba(206, 233, 253, 0.8);
+    font-size: 12px;
+    color: rgb(30, 30, 30);
+    line-height: 170%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: justify;
+    position: absolute;
+  }
+  .intro1 {
+    top: 1%;
+    width: 70%;
+    margin-left: 4%;
+    font-weight: bold;
+  }
+
+  .intro2 {
+    top: 61%;
+    width: 70%;
+    margin-left: 4%;
+    font-weight: bold;
+  }
+
+  .uottawa {
+    top: 25%;
+    width: 80%;
+    margin-left: 15%;
+    text-align: center;
+  }
+
+  .uottawa img {
+    width: 100px;
+  }
+
+  .algonquin {
+    top: 73%;
+    width: 80%;
+    text-align: center;
+    margin-left: 15%;
+  }
+
+  .algonquin img {
+    width: 100px;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .main {
+    position: relative;
+    height: 120vh;
+
+    /** fadeIn main **/
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #main-index {
+    position: relative;
+    background-image: url("../Images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .intro1,
+  .intro2,
+  .uottawa,
+  .algonquin {
+    background-color: rgba(206, 233, 253, 0.8);
+    font-size: 2vw;
+    color: rgb(30, 30, 30);
+    line-height: 150%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: justify;
+  }
+  .intro1 {
+    /* margin-left: 4%; */
+    margin: 0 3px;
+    font-weight: bold;
+  }
+
+  .intro2 {
+    /* margin-left: 4%; */
+    margin: 0 3px;
+    font-weight: bold;
+  }
+
+  .uottawa {
+    width: 99%;
+
+    text-align: center;
+    margin: 0 3px;
+  }
+  .uottawa img {
+    width: 100px;
+  }
+
+  .algonquin {
+    width: 99%;
+    text-align: center;
+    margin: 0 3px;
+  }
+
+  .algonquin img {
+    width: 100px;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  .main {
+    position: relative;
+    margin-left: 250px;
+    height: 100vh;
+
+    /** fadeIn main **/
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #main-index {
+    position: relative;
+    background-image: url("../Images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .intro1,
+  .intro2,
+  .uottawa,
+  .algonquin {
+    background-color: rgba(206, 233, 253, 0.8);
+    font-size: 20px;
+    color: rgb(30, 30, 30);
+    line-height: 170%;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: justify;
+    position: absolute;
+  }
+
+  .intro1 {
+    right: 3%;
+    top: 5%;
+    width: 30vw;
+    min-width: 150px;
+    max-width: 800px;
+    font-weight: bold;
+  }
+
+  .intro2 {
+    right: 3%;
+    bottom: 10%;
+    width: 30vw;
+    min-width: 150px;
+    max-width: 800px;
+    font-weight: bold;
+  }
+
+  .uottawa {
+    left: 20px;
+    top: 20px;
+    width: 40vw;
+    text-align: center;
+    max-width: 1000px;
+    min-width: 150px;
+    visibility: hidden;
+
+    /** animation **/
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+  }
+
+  .intro1:hover + .uottawa {
+    visibility: visible;
+
+    /** animation **/
+    opacity: 1;
+  }
+
+  .algonquin {
+    left: 20px;
+    bottom: 60px;
+    width: 40vw;
+    text-align: center;
+    max-width: 1000px;
+    min-width: 150px;
+    visibility: hidden;
+
+    /** animation **/
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+  }
+
+  .intro2:hover + .algonquin {
+    visibility: visible;
+
+    /** animation **/
+    opacity: 1;
+  }
+
+  a {
+    color: rgb(30, 30, 30);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+/* Footer is fixed at the bottom on small and medium screens.
+   It is fixed at the left bottom on large screens
+*/
+
+/* [ON SMALL SCREENS]*/
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 5px;
+    font-size: 10px;
+    width: 100%;
+    z-index: 1;
+    background: #cee9fd;
+    text-align: center;
+  }
+
+  .design {
+    font-size: 10px;
+    font-style: italic;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  footer {
+    padding: 5px;
+    font-size: 1.5vw;
+    width: 100%;
+    z-index: 1;
+    background: #cee9fd;
+    text-align: center;
+  }
+
+  .design {
+    font-size: 1.5vw;
+    font-style: italic;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 15px;
+    font-size: 14px;
+    /* position:fixed on large screens*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 1;
+    background: #cee9fd;
+  }
+
+  .design {
+    font-size: 15px;
+    font-style: italic;
+  }
+}

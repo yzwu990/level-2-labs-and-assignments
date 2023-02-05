@@ -1,0 +1,25 @@
+
+List is:
+cardillac toyota suzuki chevrolet hyundai mercedies keke volvo subaru volkswagen nissan cardillac toyota honda 
+
+This is showing the Car Brands in uppercase letters...
+List is:
+CARDILLAC TOYOTA SUZUKI CHEVROLET HYUNDAI MERCEDIES KEKE VOLVO SUBARU VOLKSWAGEN NISSAN CARDILLAC TOYOTA HONDA 
+
+Deleting the car brands 5 to 7...
+List is:
+CARDILLAC TOYOTA SUZUKI CHEVROLET HYUNDAI SUBARU VOLKSWAGEN NISSAN CARDILLAC TOYOTA HONDA 
+
+Here is the current list of car brands...
+List is:
+CARDILLAC TOYOTA SUZUKI CHEVROLET HYUNDAI SUBARU VOLKSWAGEN NISSAN CARDILLAC TOYOTA HONDA 
+
+Reversed List:
+HONDA TOYOTA CARDILLAC NISSAN VOLKSWAGEN SUBARU HYUNDAI CHEVROLET SUZUKI TOYOTA CARDILLAC 
+
+Sorted car brands in an alphabetical order...
+List is:
+CARDILLAC CARDILLAC CHEVROLET HONDA HYUNDAI NISSAN SUBARU SUZUKI TOYOTA TOYOTA VOLKSWAGEN 
+
+Removing duplicate car brands...
+Non-duplicates are: HYUNDAI SUZUKI TOYOTA VOLKSWAGEN SUBARU CARDILLAC CHEVROLET NISSAN HONDA 

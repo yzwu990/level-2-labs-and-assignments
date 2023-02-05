@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanzhang Wu</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/courses.css">
+</head>
+
+<body>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger_menu">
+        <input type="checkbox" id="toggle">
+        <label for="toggle">
+            <span class="hamburger_container">
+                <span></span>
+                <span></span>
+            </span>
+        </label>
+        <!-- Header -->
+        <header class="header">
+            <div class="prev-introduction">
+                <img class="head-photo" src="./Images/headphoto.jpg" alt="Yanzhang head photo">
+
+                <div class="contact">
+                    <p class="">Yanzhang Wu</p>
+                    <p class="">Future Software Engineer</p>
+                    <p class="">wu000298@algonquinlive.com </p>
+                </div>
+
+
+                <div class="nav-container">
+                    <ul class="social-media">
+                        <li class="icon-link-item">
+                            <a class="icon-link" href="https://www.facebook.com/profile.php?id=100087453994097">
+                                <img src="./Images/icons/facebook.svg" alt="facebook icon">
+                            </a>
+                        </li>
+                        <li class="icon-link-item">
+                            <a class="icon-link" href="https://github.com/yzwu990/">
+                                <img src="./Images/icons/github.svg" alt="github icon">
+                            </a>
+                        </li>
+                        <li class="icon-link-item">
+                            <a class="icon-link" href="https://www.linkedin.com/in/yanzhang-wu-731852236/">
+                                <img src="./Images/icons/linkedin.svg" alt="linkedin icon">
+                            </a>
+                        </li>
+                        <li class="icon-link-item">
+                            <a class="icon-link" href="https://www.instagram.com/yzyzyzwu/">
+                                <img src="./Images/icons/instagram.svg" alt="instagram icon">
+                            </a>
+                        </li>
+                        <li class="icon-link-item">
+                            <a class="icon-link" href="https://twitter.com/yzwu990">
+                                <img src="./Images/icons/twitter.svg" alt="twitter icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="navbar" class="navbar">
+                <div class="">
+                    <ul class="">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:wu000298@algonquinlive.com" target="_blank">Email me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+
+
+    <!-- Page's main content -->
+    <main id="main-courses" class="main">
+        <div id="filters" class="filters-section">
+            <div class="filters-main-container">
+
+                <div>
+                    <form class="filters-form">
+
+                        <div class="filters-form-item search-bar-container">
+                            <div><label for="search">Search</label></div>
+                            <input type="search" id="search" name="search" placeholder="Search...">
+                        </div>
+
+                        <div class="filters-form-item filter-by-levels-container">
+                            <div><label for="filter">Filter by</label></div>
+                            <select id="filter" name="filter" class="general-select filter-select">
+                                <option value="level1">Level 1</option>
+                                <option value="level2">Level 2</option>
+                                <option value="level3">Level 3</option>
+                            </select>
+                        </div>
+
+                        <div class="filters-form-item sort-by-container">
+                            <div><label for="sort">Sort Course ID by</label></div>
+                            <select id="sort" name="sort" class="general-select sort-by-select">
+                                <option value="low-to-high">Low to high</option>
+                                <option value="high-to-low">High to low</option>
+                            </select>
+                        </div>
+
+                        <div class="filters-form-item submit">
+                            <button type="submit"> Apply filter </button>
+                            <button type="reset"> Reset </button>
+                        </div>
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="courses-tables" class="courses-tables-section">
+
+            <div class="table-container">
+                <table class="course-table">
+                    <thead class="thead-row">
+                        <tr>
+                            <th scope="col" class="col-short">Course Id</th>
+                            <th scope="col" class="col-short">Course Name</th>
+                            <th scope="col" class="col-short">Textbook</th>
+                            <th scope="col" class="col-long">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="col-short">CST8101</th>
+                            <td class="col-short">Computer Essentials</td>
+                            <td class="col-short"><img
+                                    src="./Images/Testbook/TheEssentialofComputerOrganization&Architecture.png"
+                                    alt="The Essential of Computer Organization& Architecture"></td>
+                            <td class="col-long">The essentials of computer software, hardware, and laptop
+                                management form the foundation for building further technical programming skills.
+                                Learn to configure your laptop environment, basic PC and troubleshoot problems.
+                                Create backups, install virus protection, and manage files through a basic
+                                understanding of the Windows Operating System. Install and configure the Windows
+                                Operating System, and a virtual machine environment. Explore computer organization
+                                including basic numerical systems, functional hardware and software components
+                                needed to run programs.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-short">CST8116</th>
+                            <td class="col-short">Intro to Computer Programming (Java)</td>
+                            <td class="col-short"><img src="./Images/Testbook/BigJavaEarlyObjects.png"
+                                    alt="Big Java Early Objects">
+                            </td>
+                            <td class="col-long">Possessing the fundamentals of logic, problem-solving and
+                                programming language structure provides a solid foundation for further study in the
+                                field. Students develop introductory knowledge of computer programming with emphasis
+                                on problem analysis and design, using algorithms, pseudocode, flowcharts, UML Class
+                                Diagrams and testing, with the Java programming language used as a means to
+                                implement problem solution designs. Through an introduction to the Java programming
+                                language students use sequential structures, selection structures, repetition
+                                structures, variables, constants, methods, constructors, one-dimensional arrays,
+                                object-oriented programming, classes, objects, abstraction, encapsulation, inputs,
+                                outputs, coding conventions and documentation. Theory is reinforced with application
+                                by means of practical laboratory assessments.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-short">CST8215</th>
+                            <td class="col-short">Introduction to Database</td>
+                            <td class="col-short"><img src="./Images/Testbook/DatabaseProcessing.png"
+                                    alt="Database Processing"></td>
+                            <td class="col-long">Students learn the fundamentals of Relational Databases design
+                                using Entity Relation diagrams, and use SQL to create, modify and query a database.
+                                Students design and create databases that are maintainable, secure and adaptable to
+                                change in business requirements, using Normalization. Students are able to compare
+                                and appreciate a Database Management System (DBMS) and its components with legacy
+                                systems.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-short">CST8102</th>
+                            <td class="col-short">Operating System Fundamentals (GNU/Linux)</td>
+                            <td class="col-short"><img src="./Images/Testbook/IntroductiontoGNULinux.png"
+                                    alt="Introduction to GNU Linux"></td>
+                            <td class="col-long">Operating systems form the backbone of information technology
+                                systems coordinating the interaction between hardware and software. Students explore
+                                the basic concepts and components of Operating Systems (OS), and how they function
+                                and interact with hardware and software components. Students examine the details of
+                                operating system structures, process management, storage management, installation,
+                                configuration, and administration both in theory and through practical assignments
+                                based on the GNU/Linux operating system. Lab work is designed to implement the
+                                theory by developing skills using the powerful GNU/Linux command-line tools and
+                                utilities.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="col-short">CST8284</th>
+                            <td class="col-short">Object Oriented Programming (Java)</td>
+                            <td class="col-short"><img src="./Images/Testbook/BigJavaEarlyObjects.png"
+                                    alt="Big Java Early Objects"></td>
+                            <td class="col-long">Working in the field of information technology as a programmer
+                                requires a firm understanding of Object-Oriented Programming (OOP) concepts.
+                                Students explore object-oriented programming methodology using the Java programming
+                                language. Object oriented concepts, such as encapsulation, inheritance, abstraction
+                                and polymorphism are covered and reinforced with practical applications. Students
+                                explore the basics of data structures and algorithms as well as basic Graphical User
+                                Interface (GUI) programming.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="col-short">CST8285</th>
+                            <td class="col-short">Web Programming</td>
+                            <td class="col-short"><img src="./Images/Testbook/LearningPHP,MySQLandJavaScript.png"
+                                    alt="Learning PHP, MySQL and JavaScript"></td>
+                            <td class="col-long">The World Wide Web (WWW) has become an integrated part of everyday
+                                life. Students develop basic skills of web programming, website design and
+                                implementation. JavaScript, HTML5, and PHP are used to explore web-based solutions
+                                to problems of increasing interactivity and complexity. Lectures are reinforced by
+                                practical assignments that encourage students to construct and maintain their own
+                                websites.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="col-short">CST2355</th>
+                            <td class="col-short">Database Systems</td>
+                            <td class="col-short"><img src="./Images/Testbook/DatabaseProcessing.png"
+                                    alt="Database Processing"></td>
+                            <td class="col-long">Database systems can automate data processing tasks as well as tie
+                                into the security of information technology systems. Students acquire practical
+                                experience using market-leading object-relational database management systems like
+                                Oracle and MySQL. Students obtain hands-on experience with advanced engineering
+                                modeling tools along with SQL, SQL scripts and programming with Oracle's PL/SQL
+                                blocks. Database concepts covered include advanced SQL, case structures, rollup and
+                                cube operations, metadata manipulation, data storage and retrieval, security and
+                                transaction control and data warehousing</td>
+                        </tr>
+
+
+
+
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <p>Copyright @Yanzhang Wu</p>
+            <p class="design">Design and format by Yanzhang Wu</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

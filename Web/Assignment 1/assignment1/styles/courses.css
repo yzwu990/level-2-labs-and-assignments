@@ -1,0 +1,546 @@
+/** Courses Page**/
+
+/*--------------------------------------------------------------
+# Filter
+--------------------------------------------------------------*/
+
+/* Filter buttons have :hover on large screens.
+   They have :active on small and medium screens.
+ */
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  #main-courses {
+    display: flex;
+    flex-direction: column;
+    /*main height should be unset, 
+      otherwise the footer will stick at 100vh*/
+    height: unset;
+  }
+
+  .filters-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding-top: 10px;
+  }
+
+  .courses-tables-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filters-main-container {
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    /* min-height: 800px; */
+  }
+
+  .search-bar-container {
+    border: none;
+    padding: 0;
+  }
+
+  .search-bar-container input[type="search"] {
+    width: 200px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    padding: 10px 5px 10px 40px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    background-image: url("../Images/icons/magnifying-glass-solid.svg");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 16px;
+  }
+
+  .search-bar-container input[type="search"]::placeholder {
+    color: rgb(200, 200, 200);
+  }
+
+  .search-bar-container input[type="search"]:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .filters-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .filters-form-item {
+    margin: 10px 10px;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .general-select {
+    padding: 10px 40px 10px 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("../Images/icons/chevron-down-solid.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px 12px;
+    appearance: none;
+  }
+
+  .general-select:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .select-icon {
+    position: absolute;
+    width: 37px;
+    padding: 10px;
+  }
+
+  .filters-form button {
+    padding: 15px;
+    color: #86b7fe;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    border-color: #86b7fe;
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .filters-form button:active {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #86b7fe;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  #main-courses {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+  }
+
+  .filters-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding-top: 10px;
+  }
+
+  .courses-tables-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filters-main-container {
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    /* min-height: 800px; */
+  }
+
+  .search-bar-container {
+    border: none;
+    padding: 0;
+  }
+
+  .search-bar-container input[type="search"] {
+    width: 200px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    padding: 10px 5px 10px 40px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    background-image: url("../Images/icons/magnifying-glass-solid.svg");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 16px;
+  }
+
+  .search-bar-container input[type="search"]::placeholder {
+    color: rgb(200, 200, 200);
+  }
+
+  .search-bar-container input[type="search"]:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .filters-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .filters-form-item {
+    margin: 10px 10px;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .general-select {
+    padding: 10px 40px 10px 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("../Images/icons/chevron-down-solid.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px 12px;
+    appearance: none;
+  }
+
+  .general-select:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .select-icon {
+    position: absolute;
+    width: 37px;
+    padding: 10px;
+  }
+
+  .filters-form button {
+    padding: 15px;
+    color: #86b7fe;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    border-color: #86b7fe;
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .filters-form button:active {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #86b7fe;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  #main-courses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding-top: 50px;
+  }
+
+  .courses-tables-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filters-main-container {
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    /* min-height: 800px; */
+  }
+
+  .search-bar-container {
+    border: none;
+    padding: 0;
+  }
+
+  .search-bar-container input[type="search"] {
+    width: 200px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    padding: 10px 5px 10px 40px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-image: url("../Images/icons/magnifying-glass-solid.svg");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 16px;
+  }
+
+  .search-bar-container input[type="search"]::placeholder {
+    color: rgb(200, 200, 200);
+  }
+
+  .search-bar-container input[type="search"]:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .filters-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .filters-form-item {
+    margin: 20px 10px;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .general-select {
+    padding: 10px 40px 10px 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("../Images/icons/chevron-down-solid.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px 12px;
+    appearance: none;
+  }
+
+  .general-select:focus-visible {
+    outline: #86b7fe auto 1px;
+  }
+
+  .select-icon {
+    position: absolute;
+    width: 37px;
+    padding: 10px;
+  }
+
+  .filters-form button {
+    padding: 15px;
+    color: #86b7fe;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    border-color: #86b7fe;
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .filters-form button:hover {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #86b7fe;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+
+/* Table is too wide on small screens. overflow:scroll is adopted.*/
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 600px) {
+  .courses-tables-section {
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .table-container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    /* overflow is adopted here,
+       so the table width is 100% */
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow: scroll;
+  }
+
+  .course-table {
+    padding: 15px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+  }
+
+  .course-table .thead-row tr th {
+    border-bottom: 2px solid rgb(200, 200, 200);
+  }
+
+  .course-table tbody tr th,
+  .course-table tbody tr td {
+    border-bottom: 1px solid rgb(200, 200, 200);
+  }
+
+  .course-table .col-short {
+    width: 15%;
+    text-align: center;
+  }
+
+  .course-table .col-long {
+    width: 55%;
+  }
+
+  .course-table > :not(caption) > * > * {
+    padding: 10px 10px;
+    background-color: white;
+    border-bottom-width: 1px;
+  }
+
+  .col-short img {
+    width: 100px;
+  }
+}
+
+/* [ON MEDIUM SCREENS] */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .courses-tables-section {
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .table-container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow: scroll;
+  }
+
+  .course-table {
+    padding: 30px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+  }
+
+  .course-table .thead-row tr th {
+    border-bottom: 2px solid rgb(200, 200, 200);
+  }
+
+  .course-table tbody tr th,
+  .course-table tbody tr td {
+    border-bottom: 1px solid rgb(200, 200, 200);
+  }
+
+  .course-table .col-short {
+    width: 15%;
+    text-align: center;
+  }
+
+  .course-table .col-long {
+    width: 55%;
+  }
+
+  .course-table > :not(caption) > * > * {
+    padding: 15px 15px;
+    background-color: white;
+    border-bottom-width: 1px;
+  }
+
+  .col-short img {
+    width: 100px;
+  }
+}
+
+/* [ON LARGE SCREENS] */
+@media screen and (min-width: 1024px) {
+  /*** table ***/
+
+  .courses-tables-section {
+    width: 95%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .table-container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .course-table {
+    padding: 30px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgb(2 59 109 / 20%);
+  }
+
+  .course-table .thead-row tr th {
+    border-bottom: 2px solid rgb(200, 200, 200);
+  }
+
+  .course-table tbody tr th,
+  .course-table tbody tr td {
+    border-bottom: 1px solid rgb(200, 200, 200);
+  }
+
+  .course-table .col-short {
+    width: 15%;
+    text-align: center;
+  }
+
+  .course-table .col-long {
+    width: 55%;
+  }
+
+  .course-table > :not(caption) > * > * {
+    padding: 15px 15px;
+    background-color: white;
+    border-bottom-width: 1px;
+  }
+
+  .col-short img {
+    width: 150px;
+  }
+}

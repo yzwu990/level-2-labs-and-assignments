@@ -1,0 +1,169 @@
+#!/bin/bash
+# FileName: mygrade.sh
+# Date: Nov 9 2022
+# Author: Yanzhang Wu
+# Student ID: 41056465
+# Semester: Fall 2022
+# Course Code: CST 8102
+# Lab Section: 314
+# Lab Professor: Matthew O'Meara
+#
+# Purpose: This script outputs a menu for choices of the user.
+#	   Then it will excute tasks including Creating & Deleting User Accounts,
+#	   Adding & Changing Users' Groups, Changing Users' Default Shells,
+#	   and Changing Expiration Dates Of Users.
+
+
+
+# To display menu
+displayMenu() {
+
+clear
+
+echo "A. Create User Account"
+echo "B. Delete User Account"
+echo "C. Change Spplementary Group for a User Account"
+echo "D. Change Initial Group for a User Account"
+echo "E. Change default login shell for a User Account"
+echo "F. Change account expiration date for a User Account"
+echo "Q. Quit"
+echo ""
+echo -n "Please select the letter:"
+}
+
+
+
+
+# To create account
+createAccount(){
+
+echo "Please enter username:"
+read name
+echo "Please enter home directory:"
+read homeDir
+echo "Please enter default login shell:"
+read deLoginShell
+
+useradd -d $homeDir -m -s $deLoginShell $name
+
+echo "Account created with success!"
+
+sleep 3
+}
+
+
+# To delete account
+deleteAccount(){
+
+echo "Please enter username:"
+read name
+
+userdel -r $name
+
+echo "Account deleted with success!"
+
+sleep 3
+}
+
+
+# To change supplementary group
+changeSuppGroup(){
+
+echo "Please enter username:"
+read name
+echo "Please enter supplementary group name:"
+read suppGroup
+
+usermod -G $suppGroup $name
+
+echo "Supplementary group changed with success!"
+
+sleep 3
+}
+
+
+
+# To change initial group
+changeIniGroup(){
+
+echo "Please enter username:"
+read name
+echo "Please enter initial group name:"
+read iniGroup
+
+usermod -g $iniGroup $name
+
+echo "Initial group changed with success!"
+
+sleep 3
+}
+
+
+
+# To change default login shell
+changeShell(){
+echo "Please enter username:"
+read name
+echo "Please enter default login shell name:"
+read shellName
+
+chsh -s $shellName $name
+
+echo "Default login shell changed with success!"
+
+sleep 3
+}
+
+
+# To change expiration date
+changeExp(){
+echo "Please enter username:"
+read name
+echo "Please enter expiration date:"
+read expDate
+
+usermod -e $expDate $name
+
+echo "Expiration date changed with success!"
+sleep 3
+}
+
+
+# Set initialize choice to a dummy value
+choice=n
+
+
+while [ $choice != "Q" ] && [ $choice != "q" ]
+do
+	displayMenu
+	read choice
+
+	if [ $choice == "a" ] || [ $choice == "A" ]
+		then
+		createAccount
+	elif [ $choice == "b" ] || [ $choice == "B" ]
+		then
+		deleteAccount
+	elif [ $choice == "c" ] || [ $choice == "C" ]
+		then
+		changeSuppGroup
+	elif [ $choice == "d" ] || [ $choice == "D" ]
+        	then
+		changeIniGroup
+	elif [ $choice == "e" ] || [ $choice == "E" ]
+		then
+		changeShell
+	elif [ $choice == "f" ] || [ $choice == "F" ]
+		then
+		changeExp
+	elif [ $choice != 'Q' ] && [ $choice != 'q' ]
+		then
+		echo "Valid options are A, B, C, D, E, F, or [Q]uit"
+		sleep 3
+
+	fi
+
+done
+
+
+# eof: myscript.sh

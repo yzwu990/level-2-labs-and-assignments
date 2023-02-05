@@ -1,0 +1,14 @@
+             Month      Feb     March   April   May     June    July    Aug     Sept
+
+             Ontario	2200    1100    1200    1000    1015    2000    1092    2204
+              Quebec    5020    6105    2009    9047    1016    2014    2708    2308
+         Nova Scotia    1720    2406    3054    1018    1023    3100    1406    1502
+       New Brunswick    1490    2002    2016    5008    2044    1055    1607    2201
+            Manitoba    1520    1007    1092    2065    1023    1010    1046    1502
+    British Columbia    1670    1201    2008    2001    1086    1009    1041    1706
+Prince Edward Island    1870    2001    2078    1006    1053    1702    1009    1406
+
+   Recovered Patients   15490   15822   13457   21145    8260   11890    9909   12829
+
+
+               Vaccinate and maintain good health practices!
